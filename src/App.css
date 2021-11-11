@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to right, #ac8c7d, #21afc8, #7c17b6);
 }
 
 .App-logo {
@@ -37,7 +38,7 @@
   }
 }
 
-.container {
-  background-image: linear-gradient(to right, #ac8c7d, #21afc8, #7c17b6);
-  border-radius: 10px;
+.photo {
+  height: 400px;
+  width: 500px;
 }

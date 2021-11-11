@@ -49,7 +49,7 @@ class Directory extends Component {
         const directory = this.state.rooms.map(room => {
             return (
                 <div className="col">
-                    <img src={room.image} alt={room.name} />
+                    <img className="photo" src={room.image} alt={room.name} />
                     <h2>{room.name}</h2>
                     <p>{room.description}</p>
                 </div>
