@@ -7,11 +7,13 @@ class Keyboard extends Component {
         };
     }
 
+// if i made a transparent box under the Keyboard, would that hold the space for it in the app?
+
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col col-sm-6 m-1">
+                    <div className="col-1 m-2 here">
                         <div className="card" id="keyboardCard">
                             <button className="blackNote dSharp" id="dSharpNote"></button>
                             <button className="blackNote cSharp" id="cSharpNote"></button>
@@ -26,6 +28,7 @@ class Keyboard extends Component {
                             <button className="whiteNote gNote" id = "gNote"></button>
                             <button className="whiteNote aNote" id = "aNote"></button>
                             <button className="whiteNote bNote" id = "bNote"></button>
+                            <img src="assets/images/largeRoom.jpeg" className="keyboardSpaceHolder" />
                         </div>
                     </div>
                 </div>

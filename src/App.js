@@ -15,12 +15,13 @@ class App extends Component {
   render() {
       return (
           <div className="App">
-              <Keyboard />
+              
               <Navbar dark color="info">
               <div className="container">
                   <NavbarBrand href="/">Desert Child Music</NavbarBrand>
               </div>
               </Navbar>
+              <Keyboard />
               <Directory  rooms={this.state.rooms} />
           </div>
       );
