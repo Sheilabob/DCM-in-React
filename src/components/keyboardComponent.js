@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 
+
+function playCNote() {
+    var cNote = new Audio();
+    cNote.src = "../assets/sound/C.mp3";
+    cNote.play();
+}
+
 class Keyboard extends Component {
     constructor(props) {
         super(props);
@@ -21,7 +28,7 @@ class Keyboard extends Component {
                             <button className="blackNote gSharp" id="gSharpNote"></button>
                             <button className="blackNote aSharp" id="aSharpNote"></button>
 
-                            <button className="whiteNote cNote" id = "cNote"></button>
+                            <button className="whiteNote cNote" id = "cNote" onClick={playCNote}></button>
                             <button className="whiteNote dNote" id = "dNote"></button>
                             <button className="whiteNote eNote" id = "eNote"></button>
                             <button className="whiteNote fNote" id = "fNote"></button>
