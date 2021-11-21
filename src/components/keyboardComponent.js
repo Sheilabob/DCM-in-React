@@ -7,6 +7,8 @@ function playCNote() {
     cNote.play();
 }
 
+// Can an object include a function?  If so, can I map through the keys to create the event listeners?
+
 class Keyboard extends Component {
     constructor(props) {
         super(props);

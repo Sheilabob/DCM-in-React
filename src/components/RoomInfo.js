@@ -36,9 +36,11 @@ class RoomInfo extends Component {
     render() {
         if (this.props.room) {
             return (
-                <div className="row">
-                   {this.renderRoom(this.props.room)}
-                   {this.renderComments(this.props.room.comments)}
+                <div className="container">
+                    <div className="row">
+                    {this.renderRoom(this.props.room)}
+                    {this.renderComments(this.props.room.comments)}
+                    </div>
                 </div>
             )
         }

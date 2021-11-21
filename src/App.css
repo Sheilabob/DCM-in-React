@@ -19,7 +19,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.whiteNote {
+/* .whiteNote {
   font-weight: bold;
   position: absolute;
   color: black;
@@ -93,4 +93,55 @@ body {
 
 .keyboardSpaceHolder {
   height: 225px;
+} */
+
+.whiteNote {
+  font-weight: bold;
+  color: black;
+  border-radius: 8px;
+  height: 68px;
+  width: 360px;
+  text-align: right;
+  z-index: 50;
+  background-color: rgb(233, 231, 219);
+  margin-left: -200px;
+}
+
+.blackNote {
+  color: black;
+  position: absolute;
+  border-radius: 8px;
+  width: 260px;
+  height: 40px;
+  margin-left: -200px;
+  z-index: 55;
+  background-color: black;
+}
+
+.topOfTwo {
+  margin-top: 319px;
+}
+
+.bottomOfTwo {
+  margin-top: 388px;
+}
+
+.topOfThree {
+  margin-top: 45px;
+}
+
+.middleOfThree {
+  margin-top: 114px;
+}
+
+.bottomOfThree {
+  margin-top: 183px;
+}
+
+.zDown {
+  z-index: -1;
+}
+
+.holder {
+  color: rgb(233, 231, 219);
 }
