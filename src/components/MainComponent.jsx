@@ -1,11 +1,12 @@
 import { Component} from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './DirectoryComponent';
 import { ROOMS } from '../shared/rentalRooms.js';
 import Keyboard from './keyboardComponent';
 import KeyboardMenu from './KeyboardMenuComponent';
 import Trying from './testingSoundComponent';
 import RoomInfo from './RoomInfo.js';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 
 
 class Main extends Component {
@@ -24,12 +25,7 @@ class Main extends Component {
   render() {
       return (
           <div>
-              
-              <Navbar dark color="info">
-              <div className="container">
-                  <NavbarBrand href="/">Desert Child Music</NavbarBrand>
-              </div>
-              </Navbar>
+              <Header />
               {/* <Keyboard /> */}
               <div className="container">
                   <div className="row">
@@ -41,10 +37,11 @@ class Main extends Component {
                     </div>
                     <div className="col-6">
                     <Directory  rooms={this.state.rooms} onClick={roomId => this.onRoomSelect(roomId)}/>
-                    <RoomInfo room={this.state.rooms.filter(room => room.id === this.state.selectedCampsite)[0]}/>
+                    <RoomInfo room={this.state.rooms.filter(room => room.id === this.state.selectedRoom)[0]}/>
                     </div>
                   </div>
               </div>
+              <Footer />
           </div>
       );
   }

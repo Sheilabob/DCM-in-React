@@ -1,17 +1,16 @@
 import React from 'react';
 
 function Trying() {
-  let audio = new Audio("./sounds/B.mp3")
 
-  const start = () => {
-    audio.play()
-  }
-
+  const playtheSound = new Audio("assets/sound/B.mp3");
+ 
   return (
     < div >
-      <button onClick={start}>Play</button>
+      <button onClick={() => {playtheSound.play()}}>Play</button>
     </div >
   );
 }
+
+
 
 export default Trying;

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 
 
-class RoomInfo extends Component {
-    renderRoom(room) {
+
+function RenderRoom({room}) {
         return(
             <div className="col-md-5 m-1">
                 <Card>
@@ -17,7 +17,8 @@ class RoomInfo extends Component {
             </div>
         )
     }
-    renderComments(comments) {
+
+function RenderComments({comments}) {
         if (comments) {
             return(
                 <div className="col-5 m-1">
@@ -33,13 +34,14 @@ class RoomInfo extends Component {
             <div />
         )
     }
-    render() {
-        if (this.props.room) {
+
+function RoomInfo(props) {
+        if (props.room) {
             return (
                 <div className="container">
                     <div className="row">
-                    {this.renderRoom(this.props.room)}
-                    {this.renderComments(this.props.room.comments)}
+                    <RenderRoom room={props.room} />
+                    <RenderComments comments={props.room.comments} />
                     </div>
                 </div>
             )
@@ -48,6 +50,5 @@ class RoomInfo extends Component {
             <div />
         )
     }
-}
 
 export default RoomInfo;
