@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 class KeyboardMenu extends React.Component {
@@ -45,8 +47,8 @@ class KeyboardMenu extends React.Component {
             <button className="blackNote bottomOfThree" id="fSharpNoteBtn">inactive</button>
 
 
-            <button className="whiteNote" id="bNoteBtn" onClick={playBNote()}>Home</button>
-            <button className="whiteNote" id="aNoteBtn">About</button>
+            <button className="whiteNote" id="bNoteBtn" onClick={playBNote()}><Link to='/home'>Home</Link></button>
+            <button className="whiteNote" id="aNoteBtn"><Link to='/directory'>About</Link></button>
             <button className="whiteNote" id="gNoteBtn">Calendar</button>
             <button className="whiteNote" id="fNoteBtn">Resources</button>
             <button className="whiteNote holder" id="eNoteBtn">?</button>

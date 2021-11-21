@@ -7,6 +7,9 @@ import Trying from './testingSoundComponent';
 import RoomInfo from './RoomInfo.js';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import Home from './HomeComponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
 
 
 class Main extends Component {
@@ -14,20 +17,26 @@ class Main extends Component {
         super(props);
         this.state = {
             rooms: ROOMS,
-            selectedRoom: null
             };
         };
 
-    onRoomSelect(roomId) {
-        this.setState({selectedRoom: roomId});
-    }
-
   render() {
+
+    const HomePage = () => {
+        return (
+            <Home />
+        )
+    }
       return (
           <div>
-              <Header />
+            <Header />
+            <Switch>
+                <Route path='/home' component={HomePage} />
+                <Route exact path='/directory' render={() => <Directory  rooms={this.state.rooms} />} />
+                <Redirect to='/home' />
+            </Switch>
               {/* <Keyboard /> */}
-              <div className="container">
+              {/* <div className="container">
                   <div className="row">
                     <KeyboardMenu />
                     <div className="col-1">
@@ -36,11 +45,10 @@ class Main extends Component {
                     <Trying />
                     </div>
                     <div className="col-6">
-                    <Directory  rooms={this.state.rooms} onClick={roomId => this.onRoomSelect(roomId)}/>
-                    <RoomInfo room={this.state.rooms.filter(room => room.id === this.state.selectedRoom)[0]}/>
+                    <Directory  rooms={this.state.rooms} />
                     </div>
                   </div>
-              </div>
+              </div> */}
               <Footer />
           </div>
       );
