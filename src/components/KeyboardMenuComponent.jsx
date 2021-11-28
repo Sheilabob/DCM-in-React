@@ -48,7 +48,7 @@ class KeyboardMenu extends Component {
 
 
             <button className="whiteNote" id="bNoteBtn" onClick={playBNote()}><Link to='/home'>Home</Link></button>
-            <button className="whiteNote" id="aNoteBtn"><Link to='/directory'>About</Link></button>
+            <button className="whiteNote" id="aNoteBtn"><Link to='/about'>About</Link></button>
             <button className="whiteNote" id="gNoteBtn"><Link to='/calendar'>Calendar</Link></button>
             <button className="whiteNote" id="fNoteBtn"><Link to='/resources'>Resources</Link></button>
             <button className="whiteNote holder" id="eNoteBtn">?</button>

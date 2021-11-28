@@ -8,6 +8,8 @@ import ResourcePage from './ResourcesPageComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import KeyboardMenu from './KeyboardMenuComponent';
 import Calendar from './CalendarComponent';
+import GamePage from './GameComponent';
+import AboutPage from './AboutComponent';
 
 
 class Main extends Component {
@@ -25,6 +27,13 @@ class Main extends Component {
             <Home />
         );
         }
+
+    const Aboutpage = () => {
+        return (
+            <AboutPage />
+        )
+    }
+
     const CalendarPage = () => {
         return (
             <Calendar />
@@ -36,6 +45,12 @@ class Main extends Component {
         );
         }
 
+    const Gamepage = () => {
+        return (
+            <GamePage />
+        )
+    }
+
       return (
           <div>
             <Header />
@@ -46,8 +61,10 @@ class Main extends Component {
                         <Switch>
                             <Route path='/home' component={HomePage} />
                             <Route exact path='/directory' render={() => <Directory  rooms={this.state.rooms} />} />
+                            <Route path='/about' component={Aboutpage} />
                             <Route path='/calendar' component={CalendarPage} />
                             <Route path='/resources' component={Resourcepage} />
+                            <Route path='/game' component={Gamepage} />
                             <Redirect to='/home' />
                         </Switch>
                     </div>

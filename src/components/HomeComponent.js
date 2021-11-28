@@ -1,6 +1,5 @@
 import React from 'react';
 import AllAbout from './AllAboutComponent';
-import Trying from './testingSoundComponent';
 import CalendarConnect from './CalendarConnectComponent';
 import Contact from './ContactComponent';
 import Resources from './ResourcesComponent';
@@ -12,7 +11,6 @@ function Home(props) {
         <div className="container">
             <div className="row">
                 <SignUp />
-                <Trying />
                 <AllAbout />
                 <CalendarConnect />
                 <Contact />

@@ -25,6 +25,10 @@ function Footer(props) {
                     <div className="col-sm-4 text-center">
                         <a role="button" className="btn btn-link" href="tel:+14352592985"><i className="fa fa-phone" /> 1-435-259-2985</a><br />
                         <a role="button" className="btn btn-link" href="mailto:smstrahan@gmail.com"><i className="fa fa-envelope-o" /> smstrahan@gmail.com</a>
+
+                        <iframe width="250" height="175" loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJc4bl6frhR4cRgSbPcJx1bOI&key=AIzaSyCkHxeFNcX0PsKqpLjq7-zi2KRKwkJqx5Q"></iframe>
+
                     </div>
                 </div>
             </div>

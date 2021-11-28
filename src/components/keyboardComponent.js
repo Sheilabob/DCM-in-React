@@ -3,7 +3,73 @@ import React, { Component } from 'react';
 
 function playCNote() {
     var cNote = new Audio();
-    cNote.src = "../assets/sound/C.mp3";
+    cNote.src = "/assets/sound/C.mp3";
+    cNote.play();
+}
+
+function playDNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/D.mp3";
+    cNote.play();
+}
+
+function playENote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/E.mp3";
+    cNote.play();
+}
+
+function playFNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/F.mp3";
+    cNote.play();
+}
+
+function playGNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/G.mp3";
+    cNote.play();
+}
+
+function playANote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/A.mp3";
+    cNote.play();
+}
+
+function playBNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/B.mp3";
+    cNote.play();
+}
+
+function playCSharpNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/CSharp.mp3";
+    cNote.play();
+}
+
+function playDSharpNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/DSharp.mp3";
+    cNote.play();
+}
+
+function playFSharpNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/FSharp.mp3";
+    cNote.play();
+}
+
+function playGSharpNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/GSharp.mp3";
+    cNote.play();
+}
+
+function playASharpNote() {
+    var cNote = new Audio();
+    cNote.src = "/assets/sound/ASharp.mp3";
     cNote.play();
 }
 
@@ -24,20 +90,19 @@ class Keyboard extends Component {
                 <div className="row">
                     <div className="col-1 m-2 here">
                         <div className="card" id="keyboardCard">
-                            <button className="blackNote dSharp" id="dSharpNote"></button>
-                            <button className="blackNote cSharp" id="cSharpNote"></button>
-                            <button className="blackNote fSharp" id="fSharpNote"></button>
-                            <button className="blackNote gSharp" id="gSharpNote"></button>
-                            <button className="blackNote aSharp" id="aSharpNote"></button>
+                            <button className="blackGameNote cSharp" id="cSharpNote" onClick={playCSharpNote}></button>
+                            <button className="blackGameNote dSharp" id="dSharpNote" onClick={playDSharpNote}></button>
+                            <button className="blackGameNote fSharp" id="fSharpNote" onClick={playFSharpNote}></button>
+                            <button className="blackGameNote gSharp" id="gSharpNote" onClick={playGSharpNote}></button>
+                            <button className="blackGameNote aSharp" id="aSharpNote" onClick={playASharpNote}></button>
 
-                            <button className="whiteNote cNote" id = "cNote" onClick={playCNote}></button>
-                            <button className="whiteNote dNote" id = "dNote"></button>
-                            <button className="whiteNote eNote" id = "eNote"></button>
-                            <button className="whiteNote fNote" id = "fNote"></button>
-                            <button className="whiteNote gNote" id = "gNote"></button>
-                            <button className="whiteNote aNote" id = "aNote"></button>
-                            <button className="whiteNote bNote" id = "bNote"></button>
-                            <img src="assets/images/largeRoom.jpeg" alt="large room" className="keyboardSpaceHolder" />
+                            <button className="whiteGameNote cNote" id = "cNote" onClick={playCNote}></button>
+                            <button className="whiteGameNote dNote" id = "dNote" onClick={playDNote}></button>
+                            <button className="whiteGameNote eNote" id = "eNote" onClick={playENote}></button>
+                            <button className="whiteGameNote fNote" id = "fNote" onClick={playFNote}></button>
+                            <button className="whiteGameNote gNote" id = "gNote" onClick={playGNote}></button>
+                            <button className="whiteGameNote aNote" id = "aNote" onClick={playANote}></button>
+                            <button className="whiteGameNote bNote" id = "bNote" onClick={playBNote}></button>
                         </div>
                     </div>
                 </div>

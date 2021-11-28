@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import { Card, CardImg, CardTitle, CardBody, Collapse, CardHeader } from 'reactstrap';
+import { Card, CardImg, CardTitle, CardBody, Collapse, CardHeader, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 
 function ResourcePage() {
 
@@ -8,6 +10,7 @@ function ResourcePage() {
 
     return (
         <>
+            <Button><Link to="/game">Game</Link></Button>
             <Card>
                 <CardImg src="/assets/images/metronome.jpeg" height="350" alt="metronome" />
                 <CardTitle>

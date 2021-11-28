@@ -65,7 +65,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* .whiteNote {
+.whiteGameNote {
   font-weight: bold;
   position: absolute;
   color: black;
@@ -78,7 +78,7 @@ h2 {
   margin-top: -5px;
 }
 
-.blackNote {
+.blackGameNote {
   color: black;
   position: absolute;
   border-radius: 8px;
@@ -139,7 +139,7 @@ h2 {
 
 .keyboardSpaceHolder {
   height: 225px;
-} */
+}
 
 .whiteNote {
   font-weight: bold;
