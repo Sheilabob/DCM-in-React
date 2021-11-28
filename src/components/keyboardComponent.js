@@ -37,7 +37,7 @@ class Keyboard extends Component {
                             <button className="whiteNote gNote" id = "gNote"></button>
                             <button className="whiteNote aNote" id = "aNote"></button>
                             <button className="whiteNote bNote" id = "bNote"></button>
-                            <img src="assets/images/largeRoom.jpeg" className="keyboardSpaceHolder" />
+                            <img src="assets/images/largeRoom.jpeg" alt="large room" className="keyboardSpaceHolder" />
                         </div>
                     </div>
                 </div>

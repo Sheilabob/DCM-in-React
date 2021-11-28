@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-class KeyboardMenu extends React.Component {
+class KeyboardMenu extends Component {
 
 
     // constructor() {
@@ -49,8 +49,8 @@ class KeyboardMenu extends React.Component {
 
             <button className="whiteNote" id="bNoteBtn" onClick={playBNote()}><Link to='/home'>Home</Link></button>
             <button className="whiteNote" id="aNoteBtn"><Link to='/directory'>About</Link></button>
-            <button className="whiteNote" id="gNoteBtn">Calendar</button>
-            <button className="whiteNote" id="fNoteBtn">Resources</button>
+            <button className="whiteNote" id="gNoteBtn"><Link to='/calendar'>Calendar</Link></button>
+            <button className="whiteNote" id="fNoteBtn"><Link to='/resources'>Resources</Link></button>
             <button className="whiteNote holder" id="eNoteBtn">?</button>
             <button className="whiteNote holder" id="dNoteBtn">?</button>
             <button className="whiteNote holder" id="cNoteBtn">?</button>

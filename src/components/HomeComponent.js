@@ -1,12 +1,23 @@
 import React from 'react';
-import KeyboardMenu from './KeyboardMenuComponent';
+import AllAbout from './AllAboutComponent';
+import Trying from './testingSoundComponent';
+import CalendarConnect from './CalendarConnectComponent';
+import Contact from './ContactComponent';
+import Resources from './ResourcesComponent';
+import SignUp from './SignUp';
 
 
 function Home(props) {
     return (
         <div className="container">
-            <h4>Home</h4>
-            <KeyboardMenu />
+            <div className="row">
+                <SignUp />
+                <Trying />
+                <AllAbout />
+                <CalendarConnect />
+                <Contact />
+                <Resources />
+            </div>
         </div>
     );
 }

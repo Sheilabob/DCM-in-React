@@ -26,11 +26,6 @@ function Directory(props) {
                 <div className="row">
                     {directory}
                 </div>
-                {/* <div className="row">
-                    <div className="col-md-5 m-1">
-                        {this.renderSelectedRoom(this.state.selectedRoom)}
-                    </div>
-                </div> */}
             </div>
         );
     
