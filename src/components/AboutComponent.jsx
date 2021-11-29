@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, CardImg, CardTitle, CardBody, Collapse, CardHeader, Button, TabContent, TabPane, Nav,
     NavItem, NavLink, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';

@@ -10,6 +10,8 @@ import KeyboardMenu from './KeyboardMenuComponent';
 import Calendar from './CalendarComponent';
 import GamePage from './GameComponent';
 import AboutPage from './AboutComponent';
+import { NOTECARDS } from '../shared/notecards.js';
+
 
 
 class Main extends Component {
@@ -17,6 +19,7 @@ class Main extends Component {
         super(props);
         this.state = {
             rooms: ROOMS,
+            notecards: NOTECARDS
             };
         };
 
@@ -47,9 +50,11 @@ class Main extends Component {
 
     const Gamepage = () => {
         return (
-            <GamePage />
+            <GamePage notecard={this.state.notecards.filter(notecard => notecard.id === 1)[0]} />
         )
     }
+
+    // campsite={this.props.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]}
 
       return (
           <div>

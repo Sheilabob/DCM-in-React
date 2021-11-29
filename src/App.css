@@ -191,3 +191,8 @@ h2 {
 .holder {
   color: rgb(233, 231, 219);
 }
+
+.noteNameCard {
+  width: 75px;
+  height: 175px;
+}
