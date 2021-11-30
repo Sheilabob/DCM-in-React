@@ -28,10 +28,10 @@ class SignUp extends Component {
     render() {
         return (
             <div>
-                <div className="col">
+                <div className="col-12">
                     <Card>
                         <Button className="btn-info btn-lg" outline onClick={this.toggleModal}>
-                        Sign Up
+                        Lesson Sign Up
                         </Button>
                     </Card>
                 </div>

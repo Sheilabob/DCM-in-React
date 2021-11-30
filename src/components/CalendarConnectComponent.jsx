@@ -10,16 +10,18 @@ import { Link } from 'react-router-dom';
 function CalendarConnect() {
 
     return (
-        <Card>
+        <div className="col-md-6">
+        <Card className="m-1">
             <Link to='/calendar'>
-                <CardImg src="/assets/images/pianoConcert.jpeg" height="350" alt="kids on concert stage" />
+                <CardImg src="/assets/images/pianoConcert.jpeg" height="350" alt="kids on concert stage" className="img-fluid rounded topStockPhotos" />
                 <CardBody className="col text-left">
                     <CardTitle>
-                        <h1>Future Events!</h1>
+                        <h2>Events</h2>
                     </CardTitle>
                 </CardBody>
             </Link>
         </Card>
+        </div>
     );
 }
 

@@ -1,18 +1,17 @@
-.App {
-  background-color: #c8eef5;
-}
-
 .photo {
   height: 300px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #c8eef5;
 }
 
 h1,
 h2,
 h3,
+h4,
+h5,
 .card-body > .card-title {
   font-family: "Lobster", cursive;
 }
@@ -52,6 +51,10 @@ h2 {
   color: white;
 }
 
+.jumbotron h1 {
+  color: #c8eef5;
+}
+
 .jumbotron h2 {
   color: #cec8ff;
 }
@@ -63,6 +66,16 @@ h2 {
 .card-img-overlay .card-title {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.topStockPhotos {
+  height: 250px;
+  width: 100%;
+}
+
+.card {
+  background-color: #ddd1c3;
+  padding: 10px;
 }
 
 .whiteGameNote {

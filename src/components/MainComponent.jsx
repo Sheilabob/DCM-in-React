@@ -62,6 +62,8 @@ class Main extends Component {
             <div className="container">
                 <div className="row">
                     <KeyboardMenu />
+                    <div className="col-1 zDown">
+                    </div>
                     <div className="col">
                         <Switch>
                             <Route path='/home' component={HomePage} />

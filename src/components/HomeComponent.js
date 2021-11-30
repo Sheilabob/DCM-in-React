@@ -11,6 +11,8 @@ function Home(props) {
         <div className="container">
             <div className="row">
                 <SignUp />
+            </div>
+            <div className="row">
                 <AllAbout />
                 <CalendarConnect />
                 <Contact />
