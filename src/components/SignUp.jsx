@@ -21,7 +21,7 @@ class SignUp extends Component {
     }
 
     handleLogin(event) {
-        alert(`Parent Name: ${this.parentname.value} Student Name: ${this.studentname.value} Student Age: ${this.studentage.value} Remember: ${this.remember.checked}`);
+        alert(`Parent Name: ${this.parentname.value} Student Name: ${this.studentname.value} Student Age: ${this.studentage.value} Taken lessons: ${this.takenlessons.checked} Earliest time: ${this.earliesttime.value} Latest time: ${this.latesttime.value}`);
         this.toggleModal();
         event.preventDefault();
     }
@@ -55,6 +55,7 @@ class SignUp extends Component {
                                 <FormGroup className="col-6">
                                 <Label htlmFor="studentage">Age of Student</Label>
                                 <Input type="select" id="studentage" name="studentage" innerRef={input => this.studentage = input}>
+                                    <option>Select...</option>
                                     <option>4</option>
                                     <option>5</option>
                                     <option>6</option>
@@ -64,13 +65,35 @@ class SignUp extends Component {
                                     <option>10+</option>
                                     </Input>
                             </FormGroup>
-                            </div>
-                            <FormGroup check>
-                                <Label check>
-                                    <Input type="checkbox" name="remember" innerRef={input => this.remember = input}/>
-                                    Remember me
+                            <FormGroup className="col-6">
+                            <Label check>
+                                    <Input type="checkbox" name="takenlessons" innerRef={input => this.takenlessons = input} />
+                                    Check here if student has previously had lessons:
                                 </Label>
                             </FormGroup>
+                            </div>
+                            <div className="row">
+                                <FormGroup className="col-6">
+                                <Label htlmFor="earliesttime">Earliest Lesson Time Availability</Label>
+                                <Input type="select" id="earliesttime" name="earliesttime" innerRef={input => this.earliesttime = input}>
+                                    <option>Select...</option>
+                                    <option>4:00pm</option>
+                                    <option>4:30pm</option>
+                                    <option>5:00pm</option>
+                                    <option>5:30pm</option>
+                                    </Input>
+                            </FormGroup>
+                            <FormGroup className="col-6">
+                                <Label htlmFor="earliesttime">Earliest Lesson Time Availability</Label>
+                                <Input type="select" id="earliesttime" name="earliesttime" innerRef={input => this.earliesttime = input}>
+                                    <option>Select...</option>
+                                    <option>4:30pm</option>
+                                    <option>5:00pm</option>
+                                    <option>5:30pm</option>
+                                    <option>6:00pm</option>
+                                    </Input>
+                            </FormGroup>
+                            </div>
                             <Button type="submit" value="submit" color="primary">Submit</Button>
                             </div>
                         </Form>
