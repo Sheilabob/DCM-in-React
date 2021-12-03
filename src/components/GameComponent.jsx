@@ -1,65 +1,82 @@
-import React, { useState } from 'react';
-import { Card, CardImg, CardTitle, Row, Col } from 'reactstrap';
+import React, { Component } from 'react';
+import { Card, CardImg, CardTitle, Row, Col, Button } from 'reactstrap';
 import Keyboard from './keyboardComponent';
 import { NOTECARDS } from '../shared/notecards.js';
+import { render } from '@testing-library/react';
 
 
-export default function GamePage() {
-    
-    const [noteCards, setNoteCards] = useState([ {
-        id: 0,
-        name: "C",
-        image: "/assets/images/cCard.jpg",
-    },
-    {
-        id: 1,
-        name: "D",
-        image: "/assets/images/dCard.jpg",
-    },{
-        id: 2,
-        name: "E",
-        image: "/assets/images/eCard.jpg",
-    },{
-        id: 3,
-        name: "F",
-        image: "/assets/images/fCard.jpg",
-    },{
-        id: 4,
-        name: "G",
-        image: "/assets/images/gCard.jpg",
-    },{
-        id: 5,
-        name: "A",
-        image: "/assets/images/aCard.jpg",
-    },{
-        id: 6,
-        name: "B",
-        image: "/assets/images/bCard.jpg",
+class GameComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            noteCards: NOTECARDS,
+            currentCard: null
+        }
     }
-])
 
-    const cardC = noteCards.filter(thecard => thecard.name === "C")[0];
+
+
+    onGameStart(notecard) {
+        this.setState({currentCard: notecard});
+    }
+
+    renderCurrentCard(notecard) {
+        if (notecard) {
+            return(
+                <Card>
+                    <CardImg src={notecard.image} />
+                </Card>
+            )
+        }
+    }
+
+    // let letterNameArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+
+    // // let randomNumber = 0;
+    // // {noteCards.map((card) => ({card.image}))};
+    // function getRandomNumber() {
+   
+    // let currentCard = noteCards.filter(thecard => thecard.name === letterNameArray[randomNumber])[0];
+    //     return (
+    //         <Card>
+    //         <CardImg src={currentCard.image} />
+    //         </Card>
+    //     )
+    
+    // };
+
+render() {
+
+    let randomNumber = Math.floor(Math.random() * (this.state.noteCards.length-1));
 
     return (
         <div>
             <Row>
                 <Col>
-        <Keyboard />
-        </Col>
-        
-        
-
-        <Col>
-            {noteCards.map((card) => (
-                <Card key={card.id}>
-                    <CardImg width="75" src={card.image} className="noteNameCard"/>
-                    <CardTitle>{card.name}</CardTitle>
-                </Card>
-            ))}
-            </Col>
-        </Row>
+                    <Keyboard />
+                </Col>
+                <Col>
+                    <Card>
+                        <Button onClick={() => this.onGameStart(this.state.noteCards[randomNumber])}>Start Game</Button>
+                    </Card>
+                    
+                        {this.renderCurrentCard(this.state.currentCard)}
+                    
+                    {/* <Card>
+                        <CardImg src={currentCard.image} />
+                        </Card> */}
+                    {/* {this.state.noteCards.map((notecard) => (
+                        <Card key={notecard.id}>
+                            <CardImg width="75" src={notecard.image} className="noteNameCard"/>
+                            <CardTitle>{notecard.name}</CardTitle>
+                        </Card>
+                    ))} */}
+                </Col>
+            </Row>
 
         
         </div>
     )
-}
+}}
+
+export default GameComponent;

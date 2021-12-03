@@ -88,8 +88,7 @@ class Keyboard extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-1 m-2 here">
-                        <div className="card" id="keyboardCard">
+                        
                             <button className="blackGameNote cSharp" id="cSharpNote" onClick={playCSharpNote}></button>
                             <button className="blackGameNote dSharp" id="dSharpNote" onClick={playDSharpNote}></button>
                             <button className="blackGameNote fSharp" id="fSharpNote" onClick={playFSharpNote}></button>
@@ -103,8 +102,7 @@ class Keyboard extends Component {
                             <button className="whiteGameNote gNote" id = "gNote" onClick={playGNote}></button>
                             <button className="whiteGameNote aNote" id = "aNote" onClick={playANote}></button>
                             <button className="whiteGameNote bNote" id = "bNote" onClick={playBNote}></button>
-                        </div>
-                    </div>
+                     
                 </div>
             </div>
         );
