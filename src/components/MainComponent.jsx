@@ -13,7 +13,6 @@ import AboutPage from './AboutComponent';
 import { NOTECARDS } from '../shared/notecards.js';
 
 
-
 class Main extends Component {
     constructor(props) {
         super(props);
