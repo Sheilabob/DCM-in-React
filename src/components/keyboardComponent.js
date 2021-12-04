@@ -4,8 +4,12 @@ import React, { Component } from 'react';
 function playCNote() {
     var cNote = new Audio();
     cNote.src = "/assets/sound/C.mp3";
-    cNote.play();
-}
+    cNote.play()
+    // // if (this.props.currentCard.name === "C") {
+    // //     console.log("yay");
+    // }
+};
+
 
 function playDNote() {
     var cNote = new Audio();
@@ -80,11 +84,18 @@ class Keyboard extends Component {
         super(props);
         this.state = {
         };
+
+
     }
 
 // if i made a transparent box under the Keyboard, would that hold the space for it in the app?
 
+    
+
     render() {
+
+ 
+
         return (
             <div className="container">
                 <div className="row">
