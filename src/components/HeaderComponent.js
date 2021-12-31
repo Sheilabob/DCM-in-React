@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'reactstrap';
 import { Fade, Stagger } from 'react-animation-components';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -9,7 +10,9 @@ class Header extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-3">
+                            <Link to='/home'>
                             <img src="/assets/images/stockPiano.jpeg" height="120" alt="piano logo"/>
+                            </Link>
                         </div>
                         <div className="col-3"></div>
                         <div className="col-6">

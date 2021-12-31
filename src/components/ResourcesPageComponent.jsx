@@ -10,8 +10,8 @@ function ResourcePage() {
 
     return (
         <>
-            <Button><Link to="/game">Game</Link></Button>
-            <Card >
+            <Button className="m-1"><Link to="/game">Game</Link></Button>
+            <Card className="m-1">
                 <CardImg src="/assets/images/metronome.jpeg" height="350" alt="metronome" />
                 <CardTitle>
                     <h2>Practice Tips:</h2>

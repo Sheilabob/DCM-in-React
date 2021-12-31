@@ -1,17 +1,44 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label, Card } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label, Card } from 'reactstrap';
 
 class SignUp extends Component {
 
     constructor(props) {
         super(props);
 
-
         this.state = {
+            parentname: '',
+            studentname: '',
+            studentage: 0,
+            takenlessons: false,
+            tuesday: false,
+            thursday: false,
+            earliesttime: '4:00pm',
+            latesttime: '4:30pm',
             isModalOpen: false
         };
+
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
         this.toggleModal = this.toggleModal.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
+    }
+
+    handleInputChange(event) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+    
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit(event) {
+        console.log('Current state is: ' + JSON.stringify(this.state));
+        alert('Current state is: ' + JSON.stringify(this.state));
+        event.preventDefault();
     }
 
     toggleModal() {
@@ -39,22 +66,22 @@ class SignUp extends Component {
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Lesson Request</ModalHeader>
                     <ModalBody>
-                        <Form onSubmit={this.handleLogin}>
+                        <Form onSubmit={this.handleSubmit}>
                             <div className="container">
                                 <div className="row">
                             <FormGroup className="col-6">
                                 <Label htlmFor="parentname">Parent Name</Label>
-                                <Input type="text" id="parentname" name="parentname" innerRef={input => this.parentname = input} />
+                                <Input type="text" id="parentname" name="parentname" placeholder="Parent Name" value={this.state.parentname} onChange={this.handleInputChange} />
                             </FormGroup>
                             <FormGroup className="col-6">
                                 <Label htlmFor="studentname">Student Name</Label>
-                                <Input type="text" id="studentname" name="studentname" innerRef={input => this.studentname = input} />
+                                <Input type="text" id="studentname" name="studentname" placeholder="Student Name" value={this.state.studentname} onChange={this.handleInputChange} />
                             </FormGroup>
                             </div>
                             <div className="row">
                                 <FormGroup className="col-6">
                                 <Label htlmFor="studentage">Age of Student</Label>
-                                <Input type="select" id="studentage" name="studentage" innerRef={input => this.studentage = input}>
+                                <Input type="select" name="studentage" value={this.state.studentage} onChange={this.handleInputChange}>
                                     <option>Select...</option>
                                     <option>4</option>
                                     <option>5</option>
@@ -67,15 +94,28 @@ class SignUp extends Component {
                             </FormGroup>
                             <FormGroup className="col-6">
                             <Label check>
-                                    <Input type="checkbox" name="takenlessons" innerRef={input => this.takenlessons = input} />
+                                    <Input type="checkbox" name="takenlessons" checked={this.state.takenlessons} onChange={this.handleInputChange} />
                                     Check here if student has previously had lessons:
                                 </Label>
                             </FormGroup>
                             </div>
                             <div className="row">
+                                <FormGroup className="col">
+                                    Select which days you are available for lessons: <br />
+                                    <Label check className="col-6">
+                                        <Input type="checkbox" name="tuesday" ichecked={this.state.tuesday} onChange={this.handleInputChange} />
+                                        Tuesday
+                                    </Label>
+                                    <Label check className="col-6">
+                                        <Input type="checkbox" name="thursday" checked={this.state.thursday} onChange={this.handleInputChange}  />
+                                        Thursday
+                                    </Label>
+                                </FormGroup>
+                            </div>
+                            <div className="row">
                                 <FormGroup className="col-6">
                                 <Label htlmFor="earliesttime">Earliest Lesson Time Availability</Label>
-                                <Input type="select" id="earliesttime" name="earliesttime" innerRef={input => this.earliesttime = input}>
+                                <Input type="select" name="earliesttime" value={this.state.earliesttime} onChange={this.handleInputChange}>
                                     <option>Select...</option>
                                     <option>4:00pm</option>
                                     <option>4:30pm</option>
@@ -84,8 +124,8 @@ class SignUp extends Component {
                                     </Input>
                             </FormGroup>
                             <FormGroup className="col-6">
-                                <Label htlmFor="earliesttime">Earliest Lesson Time Availability</Label>
-                                <Input type="select" id="earliesttime" name="earliesttime" innerRef={input => this.earliesttime = input}>
+                                <Label htlmFor="latesttime">Latest Lesson Time Availability</Label>
+                                <Input type="select" name="latesttime" value={this.state.latesttime} onChange={this.handleInputChange}>
                                     <option>Select...</option>
                                     <option>4:30pm</option>
                                     <option>5:00pm</option>
@@ -94,7 +134,7 @@ class SignUp extends Component {
                                     </Input>
                             </FormGroup>
                             </div>
-                            <Button type="submit" value="submit" color="primary">Submit</Button>
+                            <Button type="submit" color="primary">Submit</Button>
                             </div>
                         </Form>
                     </ModalBody>

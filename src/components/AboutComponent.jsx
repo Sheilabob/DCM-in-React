@@ -18,8 +18,8 @@ function AboutPage() {
 
     return (
         <>
-            <Button><Link to="/directory">Rooms For Rent</Link></Button>
-            <Card>
+            {/* <Button><Link to="/directory">Rooms For Rent</Link></Button> */}
+            <Card className="m-1">
                 <div className="container">
                     <div className="row">
                 <CardImg className="col-6" src="/assets/images/verticalPiano.jpeg" height="350" alt="vertical hands playing piano" />

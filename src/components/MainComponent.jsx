@@ -63,7 +63,7 @@ class Main extends Component {
                     <KeyboardMenu />
                     <div className="col-1 zDown">
                     </div>
-                    <div className="col">
+                    <div className="col-8">
                         <Switch>
                             <Route path='/home' component={HomePage} />
                             <Route exact path='/directory' render={() => <Directory  rooms={this.state.rooms} />} />
