@@ -34,13 +34,12 @@ function ResourcePage() {
                 </CardHeader>
                 <Collapse isOpen={toggleLevel1 === 1 ? true: false}>
                 <CardBody>
-                    Ways to study Cuckoo
                     <div className="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCyK4T9a4HY" allowfullscreen></iframe>
-                                                </div>
-                                                <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_1Rb5z0WT0g?start=149" allowfullscreen></iframe>
-                                                </div>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCyK4T9a4HY" title="Cuckoo" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_1Rb5z0WT0g?start=149" title="Comp Cuckoo" allowfullscreen></iframe>
+                    </div>
                 </CardBody>
                 </Collapse>
             </Card>
@@ -50,7 +49,12 @@ function ResourcePage() {
                 </CardHeader>
                 <Collapse isOpen={toggleLevel1  === 2 ? true: false}>
                 <CardBody>
-                    Ways to study Lightly Row
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C3togj0xFPY" title="Lightly Row" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_1Rb5z0WT0g?start=177" title="Comp Lightly Row" allowfullscreen></iframe>
+                    </div>
                 </CardBody>
                 </Collapse>
             </Card>
@@ -60,7 +64,12 @@ function ResourcePage() {
                 </CardHeader>
                 <Collapse isOpen={toggleLevel1 === 3 ? true: false}>
                 <CardBody>
-                    Ways to study Go Tell Aunt Rhody
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gVXDyt1Ki9A" title="Go tell Aunt Rhody" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_1Rb5z0WT0g?start=315" title="Comp Rhody" allowfullscreen></iframe>
+                    </div>
                 </CardBody>
                 </Collapse>
             </Card>
@@ -76,7 +85,12 @@ function ResourcePage() {
                 </CardHeader>
                 <Collapse isOpen={toggleLevel2 === 1 ? true: false}>
                 <CardBody>
-                    Ways to study Eccosaise
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gGzKm57Gbk4" title="Eccosaise" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dLMpkRpHg84?start=5" title="Comp Eccosaise" allowfullscreen></iframe>
+                    </div>
                 </CardBody>
                 </Collapse>
             </Card>
@@ -86,7 +100,12 @@ function ResourcePage() {
                 </CardHeader>
                 <Collapse isOpen={toggleLevel2  === 2 ? true: false}>
                 <CardBody>
-                    Ways to study Short Story
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dwF3ka5QLIg" title="Short Story" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dLMpkRpHg84?start=51" title="Comp Short Story" allowfullscreen></iframe>
+                    </div>
                 </CardBody>
                 </Collapse>
             </Card>
@@ -96,7 +115,12 @@ function ResourcePage() {
                 </CardHeader>
                 <Collapse isOpen={toggleLevel2  === 3 ? true: false}>
                 <CardBody>
-                    Ways to study Happy Farmer
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eYSCmpFyhc0" title="Happy Farmer" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dLMpkRpHg84?start=105" title="Comp Happy Farmer" allowfullscreen></iframe>
+                    </div>
                 </CardBody>
                 </Collapse>
             </Card>
